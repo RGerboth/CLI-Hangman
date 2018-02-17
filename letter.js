@@ -1,9 +1,9 @@
 //letter.js letter constructor
 
 var Letter = function(value) {
-	this.value=value;
-	this.guessed=false;
-	this.placeholder="_ "
+	this.value = value;
+	this.guessed = false;
+	this.placeholder = "_ "
 
 	this.toString = function() {
 		if (this.guessed) {
