@@ -5,25 +5,21 @@ var Word = function(input) {
 	var letters=[];
 	this.newWord = function(input) {
 		for (i=0; i < input.length; i++) {
-			var newWord = input
-			var newLetter = new Letter(newWord.charAt(i))
+			var newLetter = new Letter(input.charAt(i))
 			letters.push(newLetter)
 		}
-		// console.log(letters)
 	}
 
 	this.displayWord = function(input) {
 		var displayWord = ""
 		displayWord = letters.join(" ")
-		console.log("displayWord: " + displayWord)
+		return displayWord
 	}
 
 	this.guessLetter = function(input) {
 		for (i=0; i<letters.length; i++) {
 			letters[i].guessLetter(input)
 		}
-		displayWord = letters.join(" ")
-		console.log("displayWord: " + displayWord)
 	}
 }
 

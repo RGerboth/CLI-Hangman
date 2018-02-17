@@ -21,7 +21,7 @@ var Letter = function(value) {
 	}
 }
 
-module.exports=Letter;
+module.exports = Letter;
 
 //******** unit test code begin ****************
 // var letter = new Letter("A")
