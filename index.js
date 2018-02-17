@@ -82,8 +82,11 @@ inquirer.prompt([
 							console.log("    " + displayWord)
 							console.log(" ")
 							if (displayWord.indexOf("_ ") === -1) {
-								console.log("Winner! Congratulations.")
 								gameOver=true
+								console.log("Winner! Congratulations.")
+								console.log("")
+								gamesWon++
+								console.log("Games won: " + gamesWon)
 							}
 							playerGuess()
 						})
