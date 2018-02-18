@@ -22,14 +22,16 @@ var wordList = [
 	"finch",
 	"eagle"
 	]
-
 var newWord = "Hangman"
 var guessessLeft = 10
 var currentWordIndex = 0
 var gameOver = false
 var gamesWon = 0
 
-console.log("Welcome to Hangman, Birds of North America Edition")
+console.log(" ")
+console.log("    Welcome to Hangman, Birds of North America Edition")
+console.log(" ")
+console.log("    Here are " + wordList.length + " names of common birds of Western North America. How many do you know?")
 console.log(" ")
 
 inquirer.prompt([
@@ -41,15 +43,15 @@ inquirer.prompt([
   	}
 ]).then(function(response) {
 	if (response.confirm) {
+		console.log("")
 		console.log("Great, let's get started. ")
 		newGame = function() {
 			console.log("")
-			console.log("Here is your new word:")
+			console.log("What is this North American bird?")
 			console.log("")
 			gameOver = false
 			guessessLeft = 10
 			currentWordIndex = [Math.floor(Math.random() * wordList.length)];
-			// console.log("currentWordIndex: " + currentWordIndex + ", word: " + wordList[currentWordIndex]);
 			var currentWord = new Word()
 			currentWord.newWord(wordList[currentWordIndex])
 			console.log("    " + currentWord.displayWord())
@@ -69,10 +71,10 @@ inquirer.prompt([
 							console.log(" ")
 							currentWord.guessLetter(letterGuessedLower)
 							if (!letterGuessedLower || wordList[currentWordIndex].indexOf(letterGuessedLower) === -1) {
-								console.log("     INCORRECT")
+								console.log("     " + letterGuessedLower + " is not a match.")
 								console.log(" ")
 							} else {
-								console.log("     CORRECT!")
+								console.log("     " + letterGuessedLower + " is a match!")
 								console.log(" ")
 							}
 							guessessLeft--
