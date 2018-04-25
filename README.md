@@ -6,10 +6,16 @@ I kind of enjoy writing command line interfaces with inquirer. This game is an e
 
 The rest is simple game score keeping for number of guessess left and games won.
 
-**Try it out here: [Holy Grail Trivia](https://rgerboth.github.io/TriviaGame/# "Holy Grail Trivia")**
-
 ## Key Technologies
 
 * JavaScript
 * Node.js
 * inquirer
+
+## Installation
+This game runs in the command line and requires the inquirer node package. Here are the steps to try it out for yourself:
+
+1. Clone the CLI-Hangman repo to your local device
+2. From within the "cli-hangman" directory run "npm install" to install the inquirer package
+3. Run "node index"
+4. Enjoy!
