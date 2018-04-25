@@ -26,7 +26,7 @@ var Word = function(input) {
 module.exports = Word;
 
 //******** unit test code begin ****************
-// var word = new Word("Hangman")
+// var word = new Word()
 // word.newWord("Hangman")
 // word.displayWord()
 // word.guessLetter("a")
