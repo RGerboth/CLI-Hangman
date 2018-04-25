@@ -1,24 +1,23 @@
 //letter.js letter constructor
 
 var Letter = function(value) {
-	this.value = value;
-	this.guessed = false;
-	this.placeholder = "_ "
-
-	this.toString = function() {
-		if (this.guessed) {
-			return this.value
-		} else {
-			return this.placeholder
-		}
+  this.value = value;
+  this.guessed = false;
+  this.placeholder = "_ "
+  this.toString = function() {
+    if (this.guessed) {
+	  return this.value
+	} else {
+	  return this.placeholder
 	}
+  }
 
-	this.guessLetter = function(value) {
-		if (value == this.value) {
-			this.guessed = true;
-		}
-		this.toString()
+  this.guessLetter = function(value) {
+    if (value == this.value) {
+	  this.guessed = true;
 	}
+	  this.toString()
+  }
 }
 
 module.exports = Letter;
